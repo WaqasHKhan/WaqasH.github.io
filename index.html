@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waqas Hameed | Portfolio</title>
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --text: #333;
+      --card-bg: #fff;
+      --nav-bg: #333;
+      --header-bg: #222;
+      --accent: #00bcd4;
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #eee;
+      --card-bg: #1e1e1e;
+      --nav-bg: #222;
+      --header-bg: #000;
+      --accent: #00e5ff;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--header-bg);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin-bottom: 15px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    nav {
+      background: var(--nav-bg);
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .theme-toggle {
+      cursor: pointer;
+      background: none;
+      border: 2px solid var(--accent);
+      border-radius: 20px;
+      padding: 5px 15px;
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .skill {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px;
+      width: 120px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .skill:hover {
+      transform: scale(1.05);
+    }
+    .skill img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    footer {
+      background: var(--header-bg);
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: var(--accent);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <!-- Replace with your profile picture -->
+    <img src="https://github.com/WaqasHKhan/WaqasH.github.io/blob/main/PP.jpg">
+    <h1>Waqas Hameed</h1>
+    <p>BI & Analytics Expert | Data Storyteller | Problem Solver</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm <strong>Waqas Hameed</strong> 👋,
+      A passionate data analyst and developer. 
+      I enjoy building data-driven solutions, designing efficient systems, 
+      and learning new technologies. 
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+        <p>Python</p>
+      </div>
+      <div class="skill">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+        <p>SQL</p>
+      </div>
+      <div class="skill">
+        <img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel">
+        <p>Excel</p>
+      </div>
+      <div class="skill">
+        <img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI">
+        <p>Power BI</p>
+      </div>
+      <div class="skill">
+        <img src="https://img.icons8.com/color/48/tableau-software.png" alt="Tableau">
+        <p>Tableau</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects" id="repo-list">
+      <p>Loading projects from GitHub...</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Let's connect! You can reach me at:</p>
+    <p><strong>Email:</strong> waqashk.live@gmail.com</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/waqas-hameed1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BpNuzLHkOTiWMtWglb5u0fQ%3D%3D" target="_blank">linkedin.com/in/waqas-hameed1</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/WaqasHKhan" target="_blank">github.com/WaqasHKhan</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Waqas Hameed. Built with ❤️ using GitHub Pages.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute("data-theme");
+      if (currentTheme === "dark") {
+        body.removeAttribute("data-theme");
+        document.querySelector(".theme-toggle").textContent = "🌙 Dark Mode";
+      } else {
+        body.setAttribute("data-theme", "dark");
+        document.querySelector(".theme-toggle").textContent = "☀️ Light Mode";
+      }
+    }
+
+    // Fetch GitHub repos dynamically
+    async function loadRepos() {
+      const username = "WaqasHKhan"; // 🔹 Change to your GitHub username
+      const repoList = document.getElementById("repo-list");
+
+      try {
+        const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
+        const repos = await response.json();
+
+        repoList.innerHTML = ""; // Clear "Loading..." text
+
+        repos.forEach(repo => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+          card.innerHTML = `
+            <h3>${repo.name}</h3>
+            <p>${repo.description || "No description available."}</p>
+            <a class="btn" href="${repo.html_url}" target="_blank">View on GitHub</a>
+          `;
+          repoList.appendChild(card);
+        });
+      } catch (error) {
+        repoList.innerHTML = "<p>⚠️ Could not load repositories.</p>";
+        console.error(error);
+      }
+    }
+
+    loadRepos();
+  </script>
+</body>
+</html>

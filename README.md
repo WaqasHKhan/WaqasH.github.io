@@ -33,7 +33,7 @@ Here are some of the tools and technologies I use:
 ## 📂 Projects
 This site dynamically pulls my latest GitHub repositories and showcases them.  
 
-👉 Visit the **[Projects Section](https://waqashkhan.github.io/WaqasH.github.io/)** on my portfolio to explore.  
+👉 Visit the **[Projects Section](https://waqashkhan.github.io/WaqasH.github.io/#projects)** on my portfolio to explore.  
 
 ---
 
